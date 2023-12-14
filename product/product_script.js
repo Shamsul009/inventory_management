@@ -1,15 +1,15 @@
-function checkUserTypeAndRedirect(user_types_id,userId) {
-    // Fetch user_types_id from wherever it's available (e.g., a server response, session, etc.)
+// function checkUserTypeAndRedirect(user_types_id,userId) {
+//     // Fetch user_types_id from wherever it's available (e.g., a server response, session, etc.)
     
-    // Check if user_types_id is 1 (or the desired value)
-    if (user_types_id === 1) {
-        // Redirect to the Product Create page
-        window.location.href = '../product/product_form.php?user_id='+userId;
-    } else {
-        // Display a message or take alternative action
-        alert('You do not have permission to access this page.');
-    }
-}
+//     // Check if user_types_id is 1 (or the desired value)
+//     if (user_types_id === 1) {
+//         // Redirect to the Product Create page
+//         window.location.href = '../product/product_form.php?user_id='+userId;
+//     } else {
+//         // Display a message or take alternative action
+//         alert('You do not have permission to access this page.');
+//     }
+// }
 
 $('#productForm').submit(function(e) {
     e.preventDefault();
@@ -42,6 +42,14 @@ $('#productForm').submit(function(e) {
         success: function(response) {
             // Handle the response from product_db.php
             console.log(response);
+
+            try {
+                response = JSON.parse(response);
+            } catch (e) {
+                console.error('Error parsing JSON:', e);
+                return;
+            }
+
 
             // Reset the form if the submission was successful
             if (response.success) {

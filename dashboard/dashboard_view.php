@@ -34,7 +34,7 @@
                 <h2>Logo</h2>
                 <ul class="nav nav-pills nav-stacked">
                     <li class="active"><a href="#section1">Dashboard</a></li>
-                    <li><a href="#section2">WareHouse List</a></li>
+                    <li><a href="#" onclick="checkUserTypeAndRedirect(<?php echo $user_types_id; ?>, <?php echo $userId; ?>);">WareHouse Details </a></li>
                     <li><a href="#section3">StoreHouse List</a></li>
                     <li><a href="#" onclick="checkUserTypeAndRedirect(<?php echo $user_types_id; ?>, <?php echo $userId; ?>);">Product Create</a></li>
 
@@ -102,6 +102,7 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../authentication/authentication_module.js"></script>
     <script type="text/javascript" src="../dashboard/dashboard_script.js"></script>
     <script type="text/javascript" src="../product/product_script.js"></script>
 

@@ -25,6 +25,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $query->bindParam(':storehouseName', $storehouseName);
         $query->bindParam(':productTotal', $productTotal);
         $query->execute();
+        // After the execute statement
+        // echo "Rows affected: " . $query->rowCount(); // Check the number of affected rows
+
 
         // Respond with a success message or any other relevant data
         echo json_encode(['success' => true, 'message' => 'Product inserted successfully']);

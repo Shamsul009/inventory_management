@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 14, 2023 at 05:10 AM
+-- Generation Time: Dec 15, 2023 at 03:45 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `inventory_db`
 --
+CREATE DATABASE IF NOT EXISTS `inventory_db` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `inventory_db`;
 
 -- --------------------------------------------------------
 
@@ -27,6 +29,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `products`
 --
 
+DROP TABLE IF EXISTS `products`;
 CREATE TABLE `products` (
   `company_id` int(10) NOT NULL,
   `product_id` int(10) NOT NULL,
@@ -45,7 +48,11 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`company_id`, `product_id`, `product_name`, `warehouse_name`, `house_product_quantity`, `store_name`, `store_product_quantity`, `create_time`, `update_time`, `total_product`) VALUES
-(1, 0, 'Chips', 'BrothersWareHouseOne', 5, 'StoreHouse1', 5, NULL, NULL, 10);
+(1, 1, 'Chips', 'BrothersWareHouseOne', 13, 'StoreHouse1', 9, NULL, NULL, 22),
+(1, 2, 'Toy', 'BrothersWareHouseOne', 15, 'StoreHouse1', 5, NULL, NULL, 20),
+(1, 3, 'Toy', 'BrothersWareHouseOne', 15, 'StoreHouse1', 5, NULL, NULL, 20),
+(1, 4, 'Car', 'BrothersWareHouseOne', 7, 'StoreHouse1', 8, NULL, NULL, 15),
+(1, 5, 'Car', 'BrothersWareHouseOne', 7, 'StoreHouse1', 8, NULL, NULL, 15);
 
 -- --------------------------------------------------------
 
@@ -53,6 +60,7 @@ INSERT INTO `products` (`company_id`, `product_id`, `product_name`, `warehouse_n
 -- Table structure for table `users`
 --
 
+DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `id` int(10) NOT NULL,
   `name` varchar(50) NOT NULL,
@@ -86,6 +94,7 @@ INSERT INTO `users` (`id`, `name`, `user_types_id`, `create_at`, `update_at`, `p
 -- Table structure for table `user_types`
 --
 
+DROP TABLE IF EXISTS `user_types`;
 CREATE TABLE `user_types` (
   `id` int(10) NOT NULL,
   `name` varchar(50) NOT NULL,
@@ -101,6 +110,30 @@ INSERT INTO `user_types` (`id`, `name`, `create_time`, `update_time`) VALUES
 (1, 'Admin', '2023-12-12 20:02:12.000000', '0000-00-00 00:00:00.000000'),
 (2, 'StoreManagers', '2023-12-12 20:02:12.000000', '0000-00-00 00:00:00.000000'),
 (3, 'WarehouseStaff', '2023-12-12 20:03:06.000000', '0000-00-00 00:00:00.000000');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `warehouse_delivery`
+--
+
+DROP TABLE IF EXISTS `warehouse_delivery`;
+CREATE TABLE `warehouse_delivery` (
+  `id` int(10) NOT NULL,
+  `product_id` int(10) NOT NULL,
+  `store_house` varchar(20) NOT NULL,
+  `product_quantity` int(10) NOT NULL,
+  `warehouse_id` int(10) NOT NULL,
+  `company_id` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `warehouse_delivery`
+--
+
+INSERT INTO `warehouse_delivery` (`id`, `product_id`, `store_house`, `product_quantity`, `warehouse_id`, `company_id`) VALUES
+(28, 1, 'StoreHouse1', 5, 3, 1),
+(29, 1, 'StoreHouse1', 2, 3, 1);
 
 --
 -- Indexes for dumped tables
@@ -126,14 +159,32 @@ ALTER TABLE `user_types`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `warehouse_delivery`
+--
+ALTER TABLE `warehouse_delivery`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `products`
+--
+ALTER TABLE `products`
+  MODIFY `product_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `warehouse_delivery`
+--
+ALTER TABLE `warehouse_delivery`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- Constraints for dumped tables

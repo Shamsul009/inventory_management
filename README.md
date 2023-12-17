@@ -15,33 +15,45 @@
 **Features:**
     
 
-**Prerequistes:**
-    1.PHP (version 7.4.27):Ensure PHP is installed on your machine. You can download it from the official PHP website.
-    
-    2.XAMPP:Install XAMPP, which includes Apache, MySQL, PHP, and PhpMyAdmin. XAMPP provides an easy way to set up a local server environment.
+**Prerequisites:**
 
-    3.Visual Studio Code:Install Visual Studio Code, a lightweight and powerful code editor.
+1. **PHP (version 7.4.27):**
+   Ensure PHP is installed on your machine. You can download it from the [official PHP website](https://www.php.net/downloads.php).
 
-    4.GitHub Account:Create a GitHub account to clone the project repository.
+2. **XAMPP:**
+   Install XAMPP, which includes Apache, MySQL, PHP, and PhpMyAdmin. XAMPP provides an easy way to set up a local server environment.
 
-    5.Clone the Project:Use Git to clone the project repository into your local directory.
+3. **Visual Studio Code:**
+   Install Visual Studio Code, a lightweight and powerful code editor.
 
-    6.Configuration:Configure your local environment, such as setting up a virtual host for Apache if needed.
+4. **GitHub Account:**
+   Create a GitHub account to clone the project repository.
 
-    7.PhpMyAdmin and MySQL:Use PhpMyAdmin, included with XAMPP, to manage MySQL databases.
+5. **Clone the Project:**
+   Use Git to clone the project repository into your local directory.
+
+6. **Configuration:**
+   Configure your local environment, such as setting up a virtual host for Apache if needed.
+
+7. **PhpMyAdmin and MySQL:**
+   Use PhpMyAdmin, included with XAMPP, to manage MySQL databases.
+
 
 **Installation:**
-    1.Clone the Repository: git clone https://github.com/Shamsul009/inventory_management.git
+
+1. **Clone the Repository:** 
+git clone https://github.com/Shamsul009/inventory_management.git
     
-    2.Configure Local Server:Install XAMPP and start the Apache server and MySql.
+2. **Configure Local Server:** 
+Install XAMPP and start the Apache server and MySql.
 
-    3.Set Up Database: 
-        1.Open PhpMyAdmin (usually available at http://localhost/phpmyadmin/). or click on admin of mysql from xampp control panel.
-        2.To set up the database, import the inventory_db database by going to the database folder in the project directory.
+3. **Set Up Database:**
+    1.Open PhpMyAdmin (usually available at http://localhost/phpmyadmin/). or click on admin of mysql from xampp control panel.
+    2.To set up the database, import the inventory_db database by going to the database folder in the project directory.
 
-    4.Run the Project
-        1.Start the XAMPP server.
-        2.Open a web browser and visit the local project URL.
+4. **Run the Project:**
+    1.Start the XAMPP server.
+    2.Open a web browser and visit the local project URL.
 
 **Acknowledgments:**
     1.https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_intro

@@ -17,6 +17,13 @@ CSS is used to style the HTML elements, providing a visually appealing layout.
 
 
 **Features:**
+
+1. **Login Page: Verifying Credentials**
+2. **Business Owner Dashboard: Creating Products with Essential Details**
+3. **Warehouse Staff: Product Delivery to Store**
+Warehouse staff members have the ability to deliver products to the store.
+4. **Utilizing Session and Cookie to Monitor User Information:**
+The system employs session and cookie mechanisms to track and manage user information efficiently.
     
 
 **Prerequisites:**

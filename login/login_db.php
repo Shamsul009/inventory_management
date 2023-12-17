@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once("../config/db_connect.php");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -25,6 +26,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
         if ($user) {
+
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['user_authenticated'] = true;
+            setcookie('user_id', $user['id'], time() + 3600, '/', '', true, true);
+
             // User found, perform login actions
             echo json_encode(['success' => true, 'message' => 'Login successful','user'=>$user]);
         } else {

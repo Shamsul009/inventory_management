@@ -1,4 +1,8 @@
 <?php
+
+    require_once('../session/session_check.php');
+    checkSession();
+    
     if (isset($_GET['user_id'])) {
         $userId = $_GET['user_id'];
         $user_types_id = $_GET['user_types_id'];

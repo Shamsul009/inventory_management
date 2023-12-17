@@ -1,4 +1,7 @@
 <?php
+    require_once('../session/session_check.php');
+    checkSession();
+    
     if (isset($_GET['user_id'])) {
         $userId = $_GET['user_id'];
         $user_types_id = $_GET['user_types_id'];
@@ -41,7 +44,7 @@
                     <li><a href="#" onclick="checkUserTypeAndRedirect(<?php echo $user_types_id; ?>, <?php echo $userId; ?>,auth=3,event);">WareHouse Details</a></li>
                     <li><a href="#">StoreHouse List</a></li>
                     <li><a href="#" onclick="checkUserTypeAndRedirect(<?php echo $user_types_id; ?>, <?php echo $userId; ?>, auth=1,event);">Product Create</a></li>  
-                    <li><a href="../login/login_view.php">Logout</a></li>
+                    <li><a href="../logout/logout_page.php">Logout</a></li>
                 </ul>
             </div>
             <br>

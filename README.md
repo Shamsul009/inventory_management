@@ -3,13 +3,17 @@
 **Introduction :** The owner of the company (admin), who may establish project details and maintain a dashboard to monitor the transfer from warehouse to store and store to others, is one of the three primary user categories in this system. The other two users are store employees who can deliver the item from the store to the seller and warehouse employees who can deliver the product from the warehouse to the store. Through the admin dashboard, the business owner is continuously aware of product updates.
 
 **Workflow:**
-    1.To interact with web page, JavaScript can handle events and make AJAX requests to the server.
+1. **JavaScript Interaction:** 
+    To interact with web page, JavaScript can handle events and make AJAX requests to the server.
 
-    2.The PHP scripts on the server receive these requests, perform necessary operations (e.g., querying the database), and send back the results (usually in JSON format).
+2. **Server-Side Processing with PHP:**
+    The PHP scripts on the server receive these requests, perform necessary operations (e.g., querying the database), and send back the results (usually in JSON format).
 
-    3.JavaScript can then update the HTML dynamically based on the server's response, providing a seamless and interactive user experience.
+3. **Dynamic HTML Update:** 
+JavaScript can then update the HTML dynamically based on the server's response, providing a seamless and interactive user experience.
 
-    4.CSS is used to style the HTML elements, providing a visually appealing layout.
+4. **CSS Styling:** 
+CSS is used to style the HTML elements, providing a visually appealing layout.
 
 
 **Features:**
@@ -48,16 +52,16 @@ git clone https://github.com/Shamsul009/inventory_management.git
 Install XAMPP and start the Apache server and MySql.
 
 3. **Set Up Database:**
-    1.Open PhpMyAdmin (usually available at http://localhost/phpmyadmin/). or click on admin of mysql from xampp control panel.
-    2.To set up the database, import the inventory_db database by going to the database folder in the project directory.
+a.Open PhpMyAdmin (usually available at http://localhost/phpmyadmin/). or click on admin of mysql from xampp control panel.
+b.To set up the database, import the inventory_db database by going to the database folder in the project directory.
 
 4. **Run the Project:**
-    1.Start the XAMPP server.
-    2.Open a web browser and visit the local project URL.
+a.Start the XAMPP server.
+b.Open a web browser and visit the local project URL.
 
 **Acknowledgments:**
-    1.https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_intro
-    2.https://www.php.net/docs.php
-    3.https://api.jquery.com/category/ajax/
-    4.https://www.w3schools.com/xml/ajax_intro.asp
+a.https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_intro
+b.https://www.php.net/docs.php
+c.https://api.jquery.com/category/ajax/
+d.https://www.w3schools.com/xml/ajax_intro.asp
 

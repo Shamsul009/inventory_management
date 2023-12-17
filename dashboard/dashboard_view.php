@@ -38,22 +38,19 @@
     <div class="container-fluid">
         <div class="row content">
             <div class="col-sm-3 sidenav hidden-xs">
-                <h2>Logo</h2>
+                <img src="../assets/logo (2).png" alt="Logo" width="220" height="50">
                 <ul class="nav nav-pills nav-stacked">
-                    <li class="active"><a href="#section1">Dashboard</a></li>
-                    <li><a href="#" onclick="checkUserTypeAndRedirect(<?php echo $user_types_id; ?>, <?php echo $userId; ?>,auth=3,event);">WareHouse Details</a></li>
-                    <li><a href="#">StoreHouse List</a></li>
-                    <li><a href="#" onclick="checkUserTypeAndRedirect(<?php echo $user_types_id; ?>, <?php echo $userId; ?>, auth=1,event);">Product Create</a></li>  
-                    <li><a href="../logout/logout_page.php">Logout</a></li>
+                    <li><a href="#section1" onclick="changeActiveState(this)">Dashboard</a></li>
+                    <li><a href="#" onclick="changeActiveState(this); checkUserTypeAndRedirect(<?php echo $user_types_id; ?>, <?php echo $userId; ?>, 3, event);">WareHouse Details</a></li>
+                    <li><a href="#" onclick="changeActiveState(this);">StoreHouse List</a></li>
+                    <li><a href="#" onclick="changeActiveState(this); checkUserTypeAndRedirect(<?php echo $user_types_id; ?>, <?php echo $userId; ?>, 1, event);">Product Create</a></li>
+                    <li><a href="../logout/logout_page.php" onclick="changeActiveState(this);">Logout</a></li>
                 </ul>
             </div>
             <br>
 
             <div class="col-sm-9">
-                <div class="well">
-                    <h4>Dashboard</h4>
-                    <p>Some text..</p>
-                </div>
+                
                 <div class="row">
                     <div class="col-sm-3">
                         <div class="well">
@@ -107,7 +104,7 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- <script type="text/javascript" src="../authentication/authentication_module.js"></script> -->
+    <script type="text/javascript" src="../sidebar/sidebar_state.js"></script>
     <script type="text/javascript" src="../dashboard/dashboard_script.js"></script>
     <!-- <script type="text/javascript" src="../product/product_script.js"></script> -->
 

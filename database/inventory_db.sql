@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 15, 2023 at 03:45 AM
+-- Generation Time: Dec 17, 2023 at 08:04 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -48,7 +48,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`company_id`, `product_id`, `product_name`, `warehouse_name`, `house_product_quantity`, `store_name`, `store_product_quantity`, `create_time`, `update_time`, `total_product`) VALUES
-(1, 1, 'Chips', 'BrothersWareHouseOne', 13, 'StoreHouse1', 9, NULL, NULL, 22),
+(1, 1, 'Chips', 'BrothersWareHouseOne', 8, 'StoreHouse1', 14, NULL, NULL, 22),
 (1, 2, 'Toy', 'BrothersWareHouseOne', 15, 'StoreHouse1', 5, NULL, NULL, 20),
 (1, 3, 'Toy', 'BrothersWareHouseOne', 15, 'StoreHouse1', 5, NULL, NULL, 20),
 (1, 4, 'Car', 'BrothersWareHouseOne', 7, 'StoreHouse1', 8, NULL, NULL, 15),
@@ -133,7 +133,8 @@ CREATE TABLE `warehouse_delivery` (
 
 INSERT INTO `warehouse_delivery` (`id`, `product_id`, `store_house`, `product_quantity`, `warehouse_id`, `company_id`) VALUES
 (28, 1, 'StoreHouse1', 5, 3, 1),
-(29, 1, 'StoreHouse1', 2, 3, 1);
+(29, 1, 'StoreHouse1', 2, 3, 1),
+(30, 1, 'StoreHouse1', 5, 3, 1);
 
 --
 -- Indexes for dumped tables
@@ -184,7 +185,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `warehouse_delivery`
 --
 ALTER TABLE `warehouse_delivery`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- Constraints for dumped tables

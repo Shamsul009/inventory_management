@@ -58,7 +58,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <!-- <link rel="stylesheet" href="./dashboard_desgin.css"> -->
+    <link rel="stylesheet" href="./warehouse_desgin.css">
     <title>WareHouse Page</title>
 </head>
 
@@ -68,21 +68,19 @@
     <div class="container-fluid">
         <div class="row content">
             <div class="col-sm-3 sidenav hidden-xs">
-                <h2>Logo</h2>
+            <img src="../assets/logo (2).png" alt="Logo" width="220" height="50">
                 <ul class="nav nav-pills nav-stacked">
-                    <li class="active"><a href="#section1">Dashboard</a></li>
-                    <li><a href="#" onclick="checkUserTypeAndRedirect(<?php echo $user_types_id; ?>, <?php echo $userId; ?>,auth=3,event);">WareHouse Details</a></li>
-                    <li><a href="#">StoreHouse List</a></li>
-                    <li><a href="#" onclick="checkUserTypeAndRedirect(<?php echo $user_types_id; ?>, <?php echo $userId; ?>, auth=1,event);">Product Create</a></li>  
-                    <li><a href="../login/login_view.php">Logout</a></li>
-                </ul><br>
+                    <li><a href="#section1" onclick="changeActiveState(this)">Dashboard</a></li>
+                    <li><a href="#" onclick="changeActiveState(this); checkUserTypeAndRedirect(<?php echo $user_types_id; ?>, <?php echo $userId; ?>, 3, event);">WareHouse Details</a></li>
+                    <li><a href="#" onclick="changeActiveState(this);">StoreHouse List</a></li>
+                    <li><a href="#" onclick="changeActiveState(this); checkUserTypeAndRedirect(<?php echo $user_types_id; ?>, <?php echo $userId; ?>, 1, event);">Product Create</a></li>
+                    <li><a href="../logout/logout_page.php" onclick="changeActiveState(this);">Logout</a></li>
+                </ul>
+                
             </div>
-            <br>
-
 
             <div class="col-sm-9">
-                        <table data-user-id="<?php echo $userId; ?>">
-                        
+                <table data-user-id="<?php echo $userId; ?>">
                         <tr>
                             <th>Product Name</th>
                             <th>Product Quantity</th>
@@ -95,9 +93,8 @@
                     </tbody>
                 </table>
             </div>
-            <br>
 
-            <div>
+            <div class="col-sm-12">
                 
                 <form id="updateForm" style="display: none;">
 
@@ -137,6 +134,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="../authentication/authentication_module.js"></script>
     <script type="text/javascript" src="../warehouse/warehouse_script.js"></script>
+    <script type="text/javascript" src="../sidebar/sidebar_state.js"></script>
 
 </body>
 

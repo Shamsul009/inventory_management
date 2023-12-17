@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<h2>Inventory Management System</h2>
+<h2 style="text-align:center">Inventory Management System</h2>
 
 <div class="container">
   

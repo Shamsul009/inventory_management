@@ -39,7 +39,7 @@ $(document).ready(function () {
                     window.location.href = '../dashboard/dashboard_view.php?user_id='+ user.id + '&user_types_id='+user.user_types_id;
                 } else {
                     // Display an error message or perform other actions
-                    console.log(response.message);
+                    alert(response.message);
                 }
             },
             error: function (xhr, status, error) {

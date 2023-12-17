@@ -36,7 +36,7 @@ $(document).ready(function () {
 
                 if (response.success) {
                     // Redirect to another page if login was successful
-                    window.location.href = '../dashboard/dashboard_view.php?user_id='+ user.id + '&user_types_id='+user.user_types_id; // Change 'dashboard.php' to the desired page
+                    window.location.href = '../dashboard/dashboard_view.php?user_id='+ user.id + '&user_types_id='+user.user_types_id;
                 } else {
                     // Display an error message or perform other actions
                     console.log(response.message);

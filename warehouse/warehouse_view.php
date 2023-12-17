@@ -27,7 +27,7 @@
             $companyID = $results[0]['company_id'];
         } else {
             // Handle the case where no results are found
-            $companyID = ''; // You can set a default value or handle it as needed
+            $companyID = ''; //  Set a default value or handle it as needed
         }
 
         // Separate the results based on user_types_id
@@ -98,11 +98,11 @@
             <br>
 
             <div>
-                <!-- Sample update form -->
+                
                 <form id="updateForm" style="display: none;">
 
                     <input type="hidden" id="productId" name="productId">
-                    <!-- Add your form fields here -->
+                    
                     <label for="updatedProductName">Delivery Product Quantity:</label>
                     <input type="number" id="deliveryProductQuantity" name="deliveryProductQuantity" required>
                     <br>
@@ -114,7 +114,7 @@
                                     </option>
                                 <?php endforeach; ?>
                         </select>
-                    <!-- Add other fields as needed -->
+                    
                     <br>
                     <label for="warehouseID">WareHouse Id:</label>
                     <input type="number" id="warehouseID" name="warehouseID" value="<?php echo isset($_GET['user_id']) ? htmlspecialchars($_GET['user_id']) : ''; ?>" readonly required>

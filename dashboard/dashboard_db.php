@@ -1,6 +1,7 @@
 <?php
-// Include your database connection code here
+
 session_start();
+// database connection code here
 require_once("../config/db_connect.php");
 
 // Check if the user_id parameter is set

@@ -27,6 +27,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($user) {
 
+            //set session, cookie for 1 hour
+
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['user_authenticated'] = true;
             setcookie('user_id', $user['id'], time() + 3600, '/', '', true, true);

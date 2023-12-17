@@ -1,4 +1,4 @@
-// Assuming you have a reference to the table element
+// Have a reference to the table element
 var table = document.querySelector('table');
 
 // Access the user_id attribute
@@ -15,7 +15,7 @@ function onTableLoad(userId) {
 
     // Fetch products using AJAX
     $.ajax({
-        url: 'dashboard_db.php', // Replace with the actual path to your PHP script
+        url: 'dashboard_db.php', 
         method: 'GET',
        
         data: { user_id: userId},

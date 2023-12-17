@@ -1,4 +1,4 @@
-// Assuming you have a reference to the table element
+// Have a reference to the table element
 var table = document.querySelector('table');
 
 // Access the user_id attribute
@@ -15,7 +15,7 @@ function onTableLoad(userId) {
 
     // Fetch products using AJAX
     $.ajax({
-        url: 'warehouse_db.php', // Replace with the actual path to your PHP script
+        url: 'warehouse_db.php', 
         method: 'GET',
        
         data: { user_id: userId},
@@ -46,7 +46,7 @@ function onTableLoad(userId) {
 }
 
 
-// Assuming you have a function named 'updateProduct' defined somewhere
+// Have a function named 'updateProduct' defined 
 function updateProduct(productId) {
     // Implement the logic to handle the update for the given productId
     console.log('Updating product with ID:', productId);
@@ -57,8 +57,7 @@ function updateProduct(productId) {
         updateForm.style.display = 'block';
     }
 
-    // Show the update form or perform other actions
-    // showUpdateForm(productId);
+    
 }
 
 
@@ -89,7 +88,7 @@ function submitUpdateForm() {
 
     // Send the data using AJAX
     $.ajax({
-        url: 'warehouse_update_db.php', // Replace with the actual path to your PHP script
+        url: 'warehouse_update_db.php', 
         method: 'POST',
         data: formData,
         success: function(response) {

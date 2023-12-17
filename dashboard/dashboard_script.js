@@ -28,15 +28,15 @@ function onTableLoad(userId) {
                 // Populate the table with product data
                 var productsTableBody = $('#productsTableBody');
                 $.each(response.products, function(index, product) {
-                    var row = '<tr>';
-                    row += '<td>' + product.product_name + '</td>';
-                    row += '<td>' + product.house_product_quantity + '</td>';
-                    row += '<td>' + product.warehouse_name + '</td>';
-                    row += '<td>' + product.store_product_quantity + '</td>';
-                    row += '<td>' + product.store_name + '</td>';
-                    row += '<td>' + (parseInt(product.store_product_quantity) + parseInt(product.house_product_quantity)) + '</td>';
-                    row += '<td>' + product.total_product + '</td>';
-                    row += '</tr>';
+                    var row = `<tr>
+                                    <td>${product.product_name}</td>
+                                    <td>${product.house_product_quantity}</td>
+                                    <td>${product.warehouse_name}</td>
+                                    <td>${product.store_product_quantity}</td>
+                                    <td>${product.store_name}</td>
+                                    <td>${parseInt(product.store_product_quantity) + parseInt(product.house_product_quantity)}</td>
+                                    <td>${product.total_product}</td>
+                            </tr>`;
                     productsTableBody.append(row);
                 });
             } else {

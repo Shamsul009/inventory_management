@@ -27,16 +27,14 @@ function onTableLoad(userId) {
             if (response.success) {
                 // Populate the table with product data
                 var productsTableBody = $('#productsTableBody');
-                $.each(response.products, function(index, product) {
-                    var row = '<tr>';
-                    row += '<td>' + product.product_name + '</td>';
-                    row += '<td>' + product.house_product_quantity + '</td>';
-                    // row += '<td><button>Update</button></td>';
-                  
-                    row += '<td><button onclick="updateProduct(' + product.product_id + ')">Delivery</button></td>';
-                    row += '</tr>';
-                    productsTableBody.append(row);
-                });
+            $.each(response.products, function(index, product) {
+                var row = `<tr>
+                                <td>${product.product_name}</td>
+                                <td>${product.house_product_quantity}</td>
+                                <td><button onclick="updateProduct(${product.product_id})">Delivery</button></td>
+                            </tr>`;
+                productsTableBody.append(row);
+            });
             } else {
                 console.log(response.message);
             }

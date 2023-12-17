@@ -1,8 +1,10 @@
 <?php
     if (isset($_GET['user_id'])) {
         $userId = $_GET['user_id'];
+        $user_types_id = $_GET['user_types_id'];
     } else {
         echo 'Invalid URL';
+        exit;
     }
 
     require_once("../config/db_connect.php");
@@ -35,6 +37,8 @@
     } catch (PDOException $e) {
         echo "Error: " . $e->getMessage();
     }
+    // echo '<script>const userId = ' . $userId . '; const user_types_id = ' . $user_types_id . ';</script>';
+
 
 ?>
 
@@ -44,14 +48,14 @@
 <html lang="en">
 
 <head>
-    <title>Bootstrap Example</title>
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <!-- <link rel="stylesheet" href="./dashboard_desgin.css"> -->
-    <title>Dashboard Page</title>
+    <title>WareHouse Page</title>
 </head>
 
 <body>
@@ -63,11 +67,9 @@
                 <h2>Logo</h2>
                 <ul class="nav nav-pills nav-stacked">
                     <li class="active"><a href="#section1">Dashboard</a></li>
-                    <li><a href="#" onclick="checkUserTypeAndRedirect(<?php echo $user_types_id; ?>, <?php echo $userId; ?>);">WareHouse Details </a></li>
-                    <li><a href="#section3">StoreHouse List</a></li>
-                    <li><a href="#" onclick="checkUserTypeAndRedirect(<?php echo $user_types_id; ?>, <?php echo $userId; ?>);">Product Create</a></li>
-
-                    
+                    <li><a href="#" onclick="checkUserTypeAndRedirect(<?php echo $user_types_id; ?>, <?php echo $userId; ?>,auth=3,event);">WareHouse Details</a></li>
+                    <li><a href="#">StoreHouse List</a></li>
+                    <li><a href="#" onclick="checkUserTypeAndRedirect(<?php echo $user_types_id; ?>, <?php echo $userId; ?>, auth=1,event);">Product Create</a></li>  
                     <li><a href="../login/login_view.php">Logout</a></li>
                 </ul><br>
             </div>
@@ -130,8 +132,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="../authentication/authentication_module.js"></script>
-    <!-- <script type="text/javascript" src="../dashboard/dashboard_script.js"></script>
-    <script type="text/javascript" src="../product/product_script.js"></script> -->
     <script type="text/javascript" src="../warehouse/warehouse_script.js"></script>
 
 </body>

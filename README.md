@@ -56,12 +56,12 @@ Install XAMPP and start the Apache server and MySql.
    2. To set up the database, import the inventory_db database by going to the database folder in the project directory.
 
 4. **Run the Project:**
-   a.Start the XAMPP server.
-   b.Open a web browser and visit the local project URL.
+   1. Start the XAMPP server.
+   2. Open a web browser and visit the local project URL.
 
 **Acknowledgments:**
-a.https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_intro
-b.https://www.php.net/docs.php
-c.https://api.jquery.com/category/ajax/
-d.https://www.w3schools.com/xml/ajax_intro.asp
+1. https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_intro
+2. https://www.php.net/docs.php
+3. https://api.jquery.com/category/ajax/
+4. https://www.w3schools.com/xml/ajax_intro.asp
 

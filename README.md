@@ -52,8 +52,8 @@ git clone https://github.com/Shamsul009/inventory_management.git
 Install XAMPP and start the Apache server and MySql.
 
 3. **Set Up Database:**
-..1. Open PhpMyAdmin (usually available at http://localhost/phpmyadmin/). or click on admin of mysql from xampp control panel.
-..2. To set up the database, import the inventory_db database by going to the database folder in the project directory.
+   1. Open PhpMyAdmin (usually available at http://localhost/phpmyadmin/). or click on admin of mysql from xampp control panel.
+   2. To set up the database, import the inventory_db database by going to the database folder in the project directory.
 
 4. **Run the Project:**
    a.Start the XAMPP server.

@@ -2,7 +2,7 @@
 require_once("../config/db_connect.php");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Assuming you have a database connection established
+    
     
     // Get data from the AJAX request
     $company_id = $_POST['company_id'];
